@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class PlayerWalking : MonoBehaviour
 {
-    public LayerMask ClickableLayers;
+    public LayerMask ClickableLayer;
 
     private NavMeshAgent agent;
     [SerializeField] private float speed;
@@ -27,7 +27,7 @@ public class PlayerWalking : MonoBehaviour
             Ray ray = camera.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hitInfo;
 
-            if (Physics.Raycast(ray, out hitInfo, 1000, ClickableLayers))
+            if (Physics.Raycast(ray, out hitInfo, 1000, ClickableLayer))
             {
                 agent.SetDestination(hitInfo.point);
             }
