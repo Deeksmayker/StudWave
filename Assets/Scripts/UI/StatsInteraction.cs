@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StatsInteraction : MonoBehaviour
 {
-    private Player player = new Player();
     // Start is called before the first frame update
     void Start()
     {
@@ -17,33 +16,33 @@ public class StatsInteraction : MonoBehaviour
         
     }
 
-    public void PlusTenHealth()
+    public static void PlusTenHealth()
     {
-        player.Health += 10;
+        Player.Health += 10;
     }
 
-    public void MinusTenHealth()
+    public static void MinusTenHealth()
     {
-        player.Health -= 10;
+        Player.Health -= 10;
     }
 
-    public void PlusTenHunger()
+    public static void PlusTenHunger()
     {
-        player.Hunger += 10;
+        Player.Hunger += 10;
     }
 
-    public void MinusTenHunger()
+    public static void MinusTenHunger()
     {
-        player.Hunger -= 10;
+        Player.Hunger -= 10;
     }
 
-    public void PlusTenEnergy()
+    public static void PlusTenEnergy()
     {
-        player.Energy += 10;
+        Player.Energy += 10;
     }
 
-    public void MinusTenEnergy()
+    public static void MinusTenEnergy()
     {
-        player.Energy -= 10;
+        Player.Energy -= 10;
     }
 }

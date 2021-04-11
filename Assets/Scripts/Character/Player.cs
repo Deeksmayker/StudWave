@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    private int hunger = 50;
-    public int Hunger
+    private static int hunger = 50;
+    public static int Hunger
     {
         get => hunger;
         set
@@ -19,8 +19,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Slider sliderHunger;
 
-    private int energy = 50;
-    public int Energy
+    private static int energy = 50;
+    public static int Energy
     {
         get => energy;
         set
@@ -31,8 +31,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Slider sliderEnergy;
 
-    private int health = 50;
-    public int Health
+    private static int health = 50;
+    public static int Health
     {
         get => health;
         set
