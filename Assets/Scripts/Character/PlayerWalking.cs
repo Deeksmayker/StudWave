@@ -8,6 +8,7 @@ public class PlayerWalking : MonoBehaviour
     public LayerMask ClickableLayers;
 
     private NavMeshAgent agent;
+    [SerializeField] private float speed;
 
     [SerializeField] private new Camera camera;
 
@@ -15,7 +16,7 @@ public class PlayerWalking : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = 30f;
+        agent.speed = speed;
     }
 
     // Update is called once per frame
