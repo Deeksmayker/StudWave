@@ -8,15 +8,15 @@ public class PlayerWalking : MonoBehaviour
     public LayerMask ClickableLayer;
 
     private NavMeshAgent agent;
-    [SerializeField] private float speed;
 
     [SerializeField] private new Camera camera;
+
+    [SerializeField] GameObject interactPanel;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = speed;
     }
 
     // Update is called once per frame
@@ -29,6 +29,7 @@ public class PlayerWalking : MonoBehaviour
 
             if (Physics.Raycast(ray, out hitInfo, 1000, ClickableLayer))
             {
+                interactPanel.SetActive(true);
                 agent.SetDestination(hitInfo.point);
             }
         }

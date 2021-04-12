@@ -15,8 +15,8 @@ class ScrollAndPinch : MonoBehaviour
     public bool Rotate;
     protected Plane Plane;
 
-    private float minDistance = 200;
-    private float maxDistance = 6000;
+    private float minDistance = 10;
+    private float maxDistance = 200;
 
     private void Awake()
     {
@@ -64,8 +64,10 @@ class ScrollAndPinch : MonoBehaviour
             ////Move cam amount the mid ray
             //Camera.transform.position = Vector3.LerpUnclamped(pos1, Camera.transform.position, 1 / zoom);
 
-            if (Camera.orthographicSize < 10)
-                Camera.orthographicSize = 11;
+            if (Camera.orthographicSize < minDistance)
+                Camera.orthographicSize = minDistance + 1;
+            if (Camera.orthographicSize > maxDistance)
+                Camera.orthographicSize = maxDistance - 1;
 
             if (zoom > 1)
                 Camera.orthographicSize -= 1f * zoom;
