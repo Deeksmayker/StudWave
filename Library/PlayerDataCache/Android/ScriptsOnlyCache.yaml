@@ -3,7 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraMovement
     - Main
-    - PlayerStats
+    - Player
+    - PlayerWalking
     - ScrollAndPinch
     - ShowClosePanel
     - StatsInteraction
@@ -43,7 +44,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -58,36 +63,42 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1738}
     - Class: 114
-      Script: {instanceID: 2240}
+      Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 2314}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 2244}
     - Class: 114
-      Script: {instanceID: 2952}
+      Script: {instanceID: 2318}
     - Class: 114
-      Script: {instanceID: 3036}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 3216}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3226}
+      Script: {instanceID: 3040}
     - Class: 114
-      Script: {instanceID: 3510}
+      Script: {instanceID: 3220}
     - Class: 114
-      Script: {instanceID: 3562}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 3710}
+      Script: {instanceID: 3514}
     - Class: 114
-      Script: {instanceID: 43624}
+      Script: {instanceID: 3566}
     - Class: 114
-      Script: {instanceID: 48158}
+      Script: {instanceID: 3714}
+    - Class: 114
+      Script: {instanceID: 3740}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -98,6 +109,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -194,6 +207,12 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: f2605a934da1f8369b9e1d4ef93984c1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerWalking
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -246,6 +265,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Notifications.Android.dll
     namespaceName: Unity.Notifications.Android
     className: AndroidReceivedNotificationMainThreadDispatcher
+  - hash:
+      serializedVersion: 2
+      Hash: e455df7b15efc503844fba9ddca6068a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowClosePanel
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -461,7 +486,7 @@ ScriptsOnlyBuild:
       Hash: 9d71c35f8fefb5d3eb9b2d46bd6d687d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerStats
+    className: Player
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -554,6 +579,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StatsInteraction
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -570,18 +601,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StatsInteraction
-  - hash:
-      serializedVersion: 2
-      Hash: e455df7b15efc503844fba9ddca6068a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ShowClosePanel
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
