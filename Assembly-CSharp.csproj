@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Character\Player.cs" />
     <Compile Include="Assets\Scripts\Camera\ScrollAndPinch.cs" />
     <Compile Include="Assets\Scripts\UI\StatsInteraction.cs" />
+    <Compile Include="Assets\Scripts\Character\PlayerWalking.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
