@@ -3849,17 +3849,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1636904592}
+        m_TargetAssemblyTypeName: PlayerWalking, Assembly-CSharp
+        m_MethodName: ButtonInteraction
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1074964805
 MonoBehaviour:
@@ -6372,7 +6372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.5579834, y: 28.016998}
+  m_AnchoredPosition: {x: 1.5579834, y: 28.017029}
   m_SizeDelta: {x: -1293.596, y: -569.575}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633540879
@@ -7568,7 +7568,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1987860490}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1636904592}
+        m_TargetAssemblyTypeName: PlayerWalking, Assembly-CSharp
+        m_MethodName: ButtonInteraction
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1987860490
 MonoBehaviour:
   m_ObjectHideFlags: 0
