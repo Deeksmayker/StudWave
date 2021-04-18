@@ -5,15 +5,12 @@ using UnityEngine;
 public class ShowClosePanel : MonoBehaviour
 {
     public GameObject layout;
-    private bool isLayoutClose = true;
+    private bool isLayoutOpen = false;
 
     public void LayoutInteract()
     {
-        if (isLayoutClose)
-            layout.gameObject.SetActive(true);
-        else
-            layout.gameObject.SetActive(false);
-        isLayoutClose = !isLayoutClose;
+        layout.gameObject.SetActive(!isLayoutOpen);
+        isLayoutOpen = !isLayoutOpen;
     }
 
     // Start is called before the first frame update
