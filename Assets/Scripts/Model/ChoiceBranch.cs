@@ -9,13 +9,14 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Model
 {
-    class ChoiceBranch
+    public class ChoiceBranch : MonoBehaviour
     {
         public string Message;
         public string FirstChoice;
         public string SecondChoice;
         public string ThirdChoice;
 
-        
+
+
     }
 }
