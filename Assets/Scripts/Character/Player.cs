@@ -9,41 +9,41 @@ public class Player : MonoBehaviour
 {
     #region perks
 
-    private int knowlendge;
+    private static int knowlendge;
 
-    public int Knowledge
+    public static int Knowledge
     {
         get => knowlendge;
         set => knowlendge = value >= 0 ? value : 0;
     }
 
-    private int physical;
+    private static int physical;
 
-    public int Physical
+    public static int Physical
     {
         get => physical;
         set => physical = value >= 0 ? value : 0;
     }
 
-    private int charisma;
+    private static int charisma;
 
-    public int Charisma
+    public static int Charisma
     {
         get => charisma;
         set => charisma = value >= 0 ? value : 0;
     }
 
-    private int studWave;
+    private static int studWave;
 
-    public int StudWave
+    public static int StudWave
     {
         get => studWave;
         set => studWave = value >= 0 ? value : 0;
     }
 
-    private int tech;
+    private static int tech;
 
-    public int Techíàïñàë 
+    public static int Tech
     {
         get => tech;
         set => tech = value >= 0 ? value : 0;
