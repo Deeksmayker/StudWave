@@ -216,7 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18a8c068d01672478378d2545c16859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layout: {fileID: 0}
 --- !u!1 &73624566
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,7 +3497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18a8c068d01672478378d2545c16859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layout: {fileID: 800191196}
 --- !u!1 &800912482
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,10 +6232,10 @@ MonoBehaviour:
       - m_Target: {fileID: 800191200}
         m_TargetAssemblyTypeName: ShowClosePanel, Assembly-CSharp
         m_MethodName: LayoutInteract
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 800191196}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6902,7 +6900,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18a8c068d01672478378d2545c16859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layout: {fileID: 1633540877}
 --- !u!114 &1633540880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8521,7 +8518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18a8c068d01672478378d2545c16859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layout: {fileID: 570381126}
 --- !u!114 &2017545032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8536,6 +8532,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: RTF
   Panel: {fileID: 570381126}
+  FirstChoiceButton: {fileID: 272484589}
+  SecondChoiceButton: {fileID: 858214604}
+  ThirdChoiceButton: {fileID: 1926194142}
 --- !u!1 &2019485179
 GameObject:
   m_ObjectHideFlags: 0

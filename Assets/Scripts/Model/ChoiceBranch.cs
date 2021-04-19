@@ -12,11 +12,9 @@ namespace Assets.Scripts.Model
     public class ChoiceBranch : MonoBehaviour
     {
         public string Message;
-        public string FirstChoice;
-        public string SecondChoice;
-        public string ThirdChoice;
 
-
-
+        public Choice FirstChoice;
+        public Choice SecondChoice;
+        public Choice ThirdChoice;
     }
 }

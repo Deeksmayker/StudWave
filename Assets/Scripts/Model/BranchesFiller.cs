@@ -16,9 +16,9 @@ namespace Assets.Scripts.Model
                 new ChoiceBranch()
                 {
                     Message = "Тебя спросили на паре математики, что будешь делать",
-                    FirstChoice = "Каво?",
-                    SecondChoice = "Шо?",
-                    ThirdChoice = "эээ"
+                    FirstChoice = new Choice(){Answer = "Дадада", AfterAnswer = "Ну вот песенка и спета"},
+                    SecondChoice = new Choice(){Answer = "йоойой", AfterAnswer = "Бывает"},
+                    ThirdChoice = new Choice(){Answer = "эээээээ", AfterAnswer = "Допрыгался мальчик"},
                 }
             };
 

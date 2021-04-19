@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,22 +24,31 @@ namespace Assets.Scripts.Model
 
 
         private Text messageText;
-        private Button firstChoiceButton;
-        private Button secondChoiceButton;
-        private Button thirdChoiceButton;
+        public Button FirstChoiceButton;
+        public Button SecondChoiceButton;
+        public Button ThirdChoiceButton;
+
+        private Text firstText;
+        private Text secondText;
+        private Text thirdText;
 
         void Start()
         {
             Branches = BranchesFiller.FillBranches();
 
             messageText = Panel.GetComponentInChildren<Text>();
-            //firstChoiceButton = transform.Find("Button").GetComponent<Button>();
-            
+            firstText = FirstChoiceButton.GetComponentInChildren<Text>();
+            secondText = SecondChoiceButton.GetComponentInChildren<Text>();
+            thirdText = ThirdChoiceButton.GetComponentInChildren<Text>();
         }
 
         void OnTriggerEnter()
         {
              messageText.text = Branches[Key][0].Message;
+             firstText.text = Branches[Key][0].FirstChoice.Answer;
+             secondText.text = Branches[Key][0].SecondChoice.Answer;
+             thirdText.text = Branches[Key][0].ThirdChoice.Answer;
+             ShowClosePanel.LayoutInteract(Panel);
         }
     }
 }

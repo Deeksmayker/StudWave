@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Model\ChoiceBranches.cs" />
     <Compile Include="Assets\Scripts\Model\BranchesFiller.cs" />
     <Compile Include="Assets\Scripts\Triggers\PanelTrigger.cs" />
+    <Compile Include="Assets\Scripts\Model\Choice.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

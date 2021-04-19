@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ShowClosePanel : MonoBehaviour
 {
-    public GameObject layout;
-    private bool isLayoutOpen = false;
+    public static GameObject layout;
+    private static bool isLayoutOpen = false;
 
-    public void LayoutInteract()
+    public static void LayoutInteract(GameObject layout)
     {
         layout.gameObject.SetActive(!isLayoutOpen);
         isLayoutOpen = !isLayoutOpen;
