@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Model
 {
-    public class ChoiceBranch : MonoBehaviour
+    public class ChoiceBranch
     {
         public string Message;
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine.Experimental.AI;
 
 namespace Assets.Scripts.Model
 {
@@ -13,17 +14,46 @@ namespace Assets.Scripts.Model
         {
             var RTFlist = new List<ChoiceBranch>
             {
-                new ChoiceBranch()
+                new ChoiceBranch
                 {
-                    Message = "Тебя спросили на паре математики, что будешь делать",
-                    FirstChoice = new Choice(){Answer = "Дадада", AfterAnswer = "Ну вот песенка и спета"},
-                    SecondChoice = new Choice(){Answer = "йоойой", AfterAnswer = "Бывает"},
-                    ThirdChoice = new Choice(){Answer = "эээээээ", AfterAnswer = "Допрыгался мальчик"},
+                    Message = "Прилетел ты наконец то на математику, думал отсидишься, но не тут то было. Тебя вызвали к доске, задание вроде не особо тяжелое, твои действия:",
+                    FirstChoice = new Choice
+                    {
+                        Answer = "Сыграть честно, то есть попробовать ответить",
+                        SuccesAfterAnswer = "Вышел и филигранно порешал этот пример без шансов",
+                        FailAfterAnswer = "Ну ты постоял у доски, потупил и ушел, бывает, хотя бы попытался",
+                        CheckSucces = () => Player.KnowledgeLevel >= 1,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                Player.KnowledgeXP += 2;
+                                Player.Study += 5;
+                                Player.Mood += 10;
+                                Player.Energy -= 10;
+                            }
+                            else
+                            {
+                                Player.KnowledgeXP += 1;
+                                Player.Study -= 5;
+                                Player.Mood -= 5;
+                                Player.Energy -= 15;
+                            }
+                        }
+                    },
+                    SecondChoice = new Choice {Answer = "йоойой"},
+                    ThirdChoice = new Choice {Answer = "эээээээ"}
                 }
+            };
+
+            var HOMElist = new List<ChoiceBranch>
+            {
+
             };
 
             branches = new Dictionary<string, List<ChoiceBranch>>();
             branches.Add("RTF", RTFlist);
+            branches.Add("HOME", HOMElist);
             return branches;
         }
     }

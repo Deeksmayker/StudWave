@@ -10,12 +10,6 @@ public class StatsInteraction : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public static void PlusTenHealth()
     {
         Player.Health += 10;

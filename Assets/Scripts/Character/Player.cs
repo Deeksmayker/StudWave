@@ -9,44 +9,69 @@ public class Player : MonoBehaviour
 {
     #region perks
 
-    private static int knowlendge;
+    private static int knowledgeXP;
 
-    public static int Knowledge
+    public static int KnowledgeXP
     {
-        get => knowlendge;
-        set => knowlendge = value >= 0 ? value : 0;
+        get => knowledgeXP;
+        set => knowledgeXP = Mathf.Clamp(value, 0, 100);
     }
 
-    private static int physical;
-
-    public static int Physical
+    public static int KnowledgeLevel
     {
-        get => physical;
-        set => physical = value >= 0 ? value : 0;
+        get => knowledgeXP / 5;
     }
 
-    private static int charisma;
+    private static int physicalXP;
 
-    public static int Charisma
+    public static int PhysicalXP
     {
-        get => charisma;
-        set => charisma = value >= 0 ? value : 0;
+        get => physicalXP;
+        set => physicalXP = Mathf.Clamp(value, 0, 100);
     }
 
-    private static int studWave;
-
-    public static int StudWave
+    public static int PhysicalLevel
     {
-        get => studWave;
-        set => studWave = value >= 0 ? value : 0;
+        get => physicalXP / 5;
     }
 
-    private static int tech;
+    private static int charismaXP;
 
-    public static int Tech
+    public static int CharismaXP
     {
-        get => tech;
-        set => tech = value >= 0 ? value : 0;
+        get => charismaXP;
+        set => charismaXP = Mathf.Clamp(value, 0, 100);
+    }
+
+    public static int CharismaLevel
+    {
+        get => charismaXP / 5;
+    }
+
+    private static int studWaveXP;
+
+    public static int StudWaveXP
+    {
+        get => studWaveXP;
+        set => studWaveXP = Mathf.Clamp(value, 0, 100);
+    }
+
+    public static int StudWaveLevel
+    {
+        get => studWaveXP / 5;
+    }
+
+    private static int techXP;
+
+    public static int TechXP
+    {
+        get => techXP / 5;
+        set => techXP = Mathf.Clamp(value, 0, 100);
+    }
+
+    public static int TechLevel
+    {
+        get => techXP / 5;
     }
 
     #endregion
@@ -81,12 +106,33 @@ public class Player : MonoBehaviour
             health = Mathf.Clamp(value, 0, 100);
         }
     }
+
+    private static int study = 50;
+
+    public static int Study
+    {
+        get => study;
+        set
+        {
+            study = Mathf.Clamp(value, 0, 100);
+        }
+    }
+
+    private static int mood = 50;
+
+    public static int Mood
+    {
+        get => mood;
+        set => mood = Mathf.Clamp(value, 0, 100);
+    }
     #endregion
 
 
     [SerializeField] private Slider sliderHunger;
     [SerializeField] private Slider sliderEnergy;
     [SerializeField] private Slider sliderHealth;
+    [SerializeField] private Slider sliderMood;
+    [SerializeField] private Slider sliderStudy;
 
     // Start is called before the first frame update
     void Start()
@@ -100,5 +146,7 @@ public class Player : MonoBehaviour
         sliderHunger.value = hunger;
         sliderEnergy.value = energy;
         sliderHealth.value = health;
+        sliderMood.value = mood;
+        sliderStudy.value = study;
     }
 }
