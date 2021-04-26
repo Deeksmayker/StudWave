@@ -34,7 +34,7 @@ namespace Assets.Scripts.Model
                             }
                             else
                             {
-                                Player.KnowledgeXP += 1;
+                                Player.KnowledgeXP += 10;
                                 Player.Study -= 5;
                                 Player.Mood -= 5;
                                 Player.Energy -= 15;
