@@ -32,8 +32,9 @@ namespace Assets.Scripts.Model
                                 Player.Mood += 10;
                                 Player.Energy -= 10;
                             }
+
                             else
-                            {
+                            { 
                                 Player.KnowledgeXP += 10;
                                 Player.Study -= 5;
                                 Player.Mood -= 5;
@@ -48,7 +49,13 @@ namespace Assets.Scripts.Model
 
             var HOMElist = new List<ChoiceBranch>
             {
-
+                new ChoiceBranch
+                {
+                    Message = "Салам пополам",
+                    FirstChoice = new Choice {Answer = "SDF"},
+                    SecondChoice = new Choice {Answer = "SFDSDF"},
+                    ThirdChoice = new Choice {Answer = "QWER"}
+                }
             };
 
             branches = new Dictionary<string, List<ChoiceBranch>>();
