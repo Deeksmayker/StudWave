@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Assets.Scripts.Model.ChoiceBranches
     - CameraMovement
+    - InfoPanelScript
     - Main
     - Player
     - PlayerWalking
@@ -65,29 +67,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 1884}
     - Class: 114
-      Script: {instanceID: 2244}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2318}
+      Script: {instanceID: 2250}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2324}
     - Class: 114
-      Script: {instanceID: 2956}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 3040}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3220}
+      Script: {instanceID: 3046}
     - Class: 114
-      Script: {instanceID: 3230}
+      Script: {instanceID: 3228}
     - Class: 114
-      Script: {instanceID: 3514}
+      Script: {instanceID: 3238}
     - Class: 114
-      Script: {instanceID: 3566}
+      Script: {instanceID: 3522}
     - Class: 114
-      Script: {instanceID: 3714}
+      Script: {instanceID: 3574}
     - Class: 114
-      Script: {instanceID: 3740}
+      Script: {instanceID: 3724}
+    - Class: 114
+      Script: {instanceID: 3750}
+    - Class: 114
+      Script: {instanceID: 26642}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -231,6 +237,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: d4ced0441244f0e71d6f5580d8799281
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Assets.Scripts.Model
+    className: ChoiceBranches
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -267,7 +279,7 @@ ScriptsOnlyBuild:
     className: AndroidReceivedNotificationMainThreadDispatcher
   - hash:
       serializedVersion: 2
-      Hash: e455df7b15efc503844fba9ddca6068a
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShowClosePanel
@@ -465,6 +477,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 55ec1fb94a776a180d7a5bdc27a8a27e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PanelTrigger
+  - hash:
+      serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -483,7 +501,7 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 9d71c35f8fefb5d3eb9b2d46bd6d687d
+      Hash: 3c93dbeaca745f931aead4a48ce9fea3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -601,6 +619,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 54ee0de6c55d4712333f72350a63e0c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InfoPanelScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

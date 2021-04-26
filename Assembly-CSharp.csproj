@@ -58,17 +58,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GArbage\PinchAndZoom.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerWalking.cs" />
+    <Compile Include="Assets\Scripts\Model\ChoiceBranches.cs" />
+    <Compile Include="Assets\Scripts\Model\BranchesFiller.cs" />
     <Compile Include="Assets\Scripts\UI\ShowClosePanel.cs" />
+    <Compile Include="Assets\Scripts\Model\Choice.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
     <Compile Include="Assets\Scripts\GArbage\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Triggers\PanelTrigger.cs" />
     <Compile Include="Assets\Scripts\Character\Player.cs" />
     <Compile Include="Assets\Scripts\Camera\ScrollAndPinch.cs" />
     <Compile Include="Assets\Scripts\Model\ChoiceBranch.cs" />
     <Compile Include="Assets\Scripts\UI\StatsInteraction.cs" />
-    <Compile Include="Assets\Scripts\Model\ChoiceBranches.cs" />
-    <Compile Include="Assets\Scripts\Model\BranchesFiller.cs" />
-    <Compile Include="Assets\Scripts\Triggers\PanelTrigger.cs" />
-    <Compile Include="Assets\Scripts\Model\Choice.cs" />
+    <Compile Include="Assets\Scripts\UI\InfoPanelScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

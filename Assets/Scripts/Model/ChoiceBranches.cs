@@ -64,8 +64,6 @@ namespace Assets.Scripts.Model
              secondText.text = branch.SecondChoice.Answer;
              thirdText.text = branch.ThirdChoice.Answer;
              ShowClosePanel.LayoutInteract(ChoicePanel);
-             Debug.Log(Player.KnowledgeXP);
-             Debug.Log(Player.KnowledgeLevel);
         }
 
         public void AfterChoice(int buttonIndex)

@@ -35,7 +35,7 @@ namespace Assets.Scripts.Model
 
                             else
                             { 
-                                Player.KnowledgeXP += 10;
+                                Player.KnowledgeXP += 7;
                                 Player.Study -= 5;
                                 Player.Mood -= 5;
                                 Player.Energy -= 15;
@@ -44,7 +44,29 @@ namespace Assets.Scripts.Model
                     },
                     SecondChoice = new Choice {Answer = "йоойой"},
                     ThirdChoice = new Choice {Answer = "эээээээ"}
-                }
+                },
+                //new ChoiceBranch
+                //{
+                //    Message = "asdf",
+                //    FirstChoice = new Choice
+                //    {
+                //        Answer = "SDF",
+                //        SuccesAfterAnswer = "adrfgg",
+                //        FailAfterAnswer = "SDF",
+                //        CheckSucces = () => Player.CharismaLevel >= 2,
+                //        PlayerInteract = (checkSucces) =>
+                //        {
+                //            if (checkSucces)
+                //            {
+                //                Player.Hunger += 123;
+                //            }
+                //            else
+                //            {
+                                
+                //            }
+                //        }
+                //    }
+                //}
             };
 
             var HOMElist = new List<ChoiceBranch>
