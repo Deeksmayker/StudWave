@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.Experimental.AI;
+﻿using System.Collections.Generic;
 
 namespace Assets.Scripts.Model
 {
@@ -19,7 +14,7 @@ namespace Assets.Scripts.Model
                     Message = "Прилетел ты наконец то на математику, думал отсидишься, но не тут то было. Тебя вызвали к доске, задание вроде не особо тяжелое, твои действия:",
                     FirstChoice = new Choice
                     {
-                        Answer = "Сыграть честно, то есть попробовать ответить",
+                        Answer = "Сыграть честно, то есть попробовать ответить, я ккакал",
                         SuccesAfterAnswer = "Вышел и филигранно порешал этот пример без шансов",
                         FailAfterAnswer = "Ну ты постоял у доски, потупил и ушел, бывает, хотя бы попытался",
                         CheckSucces = () => Player.KnowledgeLevel >= 1,
