@@ -14,7 +14,12 @@ public class Player : MonoBehaviour
     public static int KnowledgeXP
     {
         get => knowledgeXP;
-        set => knowledgeXP = Mathf.Clamp(value, 0, 100);
+        set
+        {
+            if (value / 5 > KnowledgeLevel)
+                InfoPanelScript.PerkIncreaseInfo("Ёнциклопедические знани€", KnowledgeLevel + (value / 5));
+            knowledgeXP = Mathf.Clamp(value, 0, 100);
+        }
     }
 
     public static int KnowledgeLevel
