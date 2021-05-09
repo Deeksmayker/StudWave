@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Model\DateTimeInfo.cs" />
     <Compile Include="Assets\Scripts\UI\StatSliders.cs" />
     <Compile Include="Assets\Scripts\Model\TimeFlow.cs" />
+    <Compile Include="Assets\Scripts\Model\PerkInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

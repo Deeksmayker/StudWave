@@ -39,7 +39,7 @@ public class InfoPanelScript : MonoBehaviour
     public void PerkRefresh()
     {
         knowledgeLevelText.text = player.KnowledgeLevel.ToString();
-        knowledgeXpSlider.value = player.KnowledgeXP;
+        knowledgeXpSlider.value = player.KnowledgeXP % 5;
         knowledgeXpText.text = player.KnowledgeXP % 5 + " / 5";
 
         majorDateText.text = String.Format("{0} год. {1} курс", dateTimeInfo.Year, dateTimeInfo.Course);
