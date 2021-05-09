@@ -5,6 +5,8 @@ namespace Assets.Scripts.Model
     public class BranchesFiller
     {
         private static Dictionary<string, List<ChoiceBranch>> branches;
+        private static DateTimeInfo dateTimeInfo = DateTimeInfo.Instance;
+
         public static Dictionary<string, List<ChoiceBranch>> FillBranches()
         {
             var RTFlist = new List<ChoiceBranch>
@@ -35,6 +37,8 @@ namespace Assets.Scripts.Model
                                 Player.Mood -= 5;
                                 Player.Energy -= 15;
                             }
+
+                            dateTimeInfo.Hour += 6; //Типа на парах он сидел шесть часов. Таже можно отельно минуты крутить, в общем можешь посмотреть в этом классе что там еще есть.
                         }
                     },
                     SecondChoice = new Choice {Answer = "йоойой"},

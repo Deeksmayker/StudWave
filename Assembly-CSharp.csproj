@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Model\ChoiceBranch.cs" />
     <Compile Include="Assets\Scripts\UI\StatsInteraction.cs" />
     <Compile Include="Assets\Scripts\UI\InfoPanelScript.cs" />
+    <Compile Include="Assets\Scripts\Model\DateTimeInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
