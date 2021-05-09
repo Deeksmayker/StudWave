@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Model
 {
-    class DateTimeInfo
+    public class DateTimeInfo
     {
         public static DateTimeInfo Instance = new DateTimeInfo();
 
@@ -79,7 +80,7 @@ namespace Assets.Scripts.Model
             get => hour;
             set
             {
-                if (value > 24)
+                if (value >= 24)
                 {
                     value -= 24;
                     Week++;
@@ -89,20 +90,25 @@ namespace Assets.Scripts.Model
             }
         }
 
-        private int minute = 0;
+        private float minuteF = 0;
 
         public int Minute
         {
-            get => minute;
+            get => (int) MinuteF;
+        }
+
+        public float MinuteF
+        {
+            get => minuteF;
             set
             {
-                if (value > 60)
+                if (value >= 60)
                 {
                     value -= 60;
                     Hour++;
                 }
 
-                minute = value;
+                minuteF = value;
             }
         }
 
@@ -116,9 +122,12 @@ namespace Assets.Scripts.Model
 
         #endregion
 
-        public string GetDateAndCourse()
+        public string GetDateTime()
         {
-            return String.Format("{0} {1} год {2} курс", (Months)month, year, course);
+            var hourStr = Hour > 9 ? Hour.ToString() : "0" + Hour;
+            var minuteStr = Minute > 9 ? Minute.ToString() : "0" + Minute;
+
+            return String.Format("{0} \nНеделя {1} \n{2}:{3}", (Months)month, Week, hourStr, minuteStr);
         }
     }
 }

@@ -7,11 +7,13 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance = new Player();
+
     #region perks
 
-    private static int knowledgeXP;
+    private int knowledgeXP;
 
-    public static int KnowledgeXP
+    public int KnowledgeXP
     {
         get => knowledgeXP;
         set
@@ -22,59 +24,59 @@ public class Player : MonoBehaviour
         }
     }
 
-    public static int KnowledgeLevel
+    public int KnowledgeLevel
     {
         get => knowledgeXP / 5;
     }
 
-    private static int physicalXP;
+    private int physicalXP;
 
-    public static int PhysicalXP
+    public int PhysicalXP
     {
         get => physicalXP;
         set => physicalXP = Mathf.Clamp(value, 0, 100);
     }
 
-    public static int PhysicalLevel
+    public int PhysicalLevel
     {
         get => physicalXP / 5;
     }
 
-    private static int charismaXP;
+    private int charismaXP;
 
-    public static int CharismaXP
+    public int CharismaXP
     {
         get => charismaXP;
         set => charismaXP = Mathf.Clamp(value, 0, 100);
     }
 
-    public static int CharismaLevel
+    public int CharismaLevel
     {
         get => charismaXP / 5;
     }
 
-    private static int studWaveXP;
+    private int studWaveXP;
 
-    public static int StudWaveXP
+    public int StudWaveXP
     {
         get => studWaveXP;
         set => studWaveXP = Mathf.Clamp(value, 0, 100);
     }
 
-    public static int StudWaveLevel
+    public int StudWaveLevel
     {
         get => studWaveXP / 5;
     }
 
-    private static int techXP;
+    private int techXP;
 
-    public static int TechXP
+    public int TechXP
     {
         get => techXP / 5;
         set => techXP = Mathf.Clamp(value, 0, 100);
     }
 
-    public static int TechLevel
+    public int TechLevel
     {
         get => techXP / 5;
     }
@@ -82,8 +84,8 @@ public class Player : MonoBehaviour
     #endregion
 
     #region stats
-    private static int hunger = 50;
-    public static int Hunger
+    private int hunger = 50;
+    public int Hunger
     {
         get => hunger;
         set
@@ -92,8 +94,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    private static int energy = 50;
-    public static int Energy
+    private int energy = 50;
+    public int Energy
     {
         get => energy;
         set
@@ -102,8 +104,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    private static int health = 50;
-    public static int Health
+    private int health = 50;
+    public int Health
     {
         get => health;
         set
@@ -112,9 +114,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    private static int study = 50;
+    private int study = 50;
 
-    public static int Study
+    public int Study
     {
         get => study;
         set
@@ -123,35 +125,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    private static int mood = 50;
+    private int mood = 50;
 
-    public static int Mood
+    public int Mood
     {
         get => mood;
         set => mood = Mathf.Clamp(value, 0, 100);
     }
     #endregion
-
-
-    [SerializeField] private Slider sliderHunger;
-    [SerializeField] private Slider sliderEnergy;
-    [SerializeField] private Slider sliderHealth;
-    [SerializeField] private Slider sliderMood;
-    [SerializeField] private Slider sliderStudy;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        sliderHunger.value = hunger;
-        sliderEnergy.value = energy;
-        sliderHealth.value = health;
-        sliderMood.value = mood;
-        sliderStudy.value = study;
-    }
 }
