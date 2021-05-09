@@ -71,6 +71,8 @@
     <Compile Include="Assets\Scripts\UI\StatsInteraction.cs" />
     <Compile Include="Assets\Scripts\UI\InfoPanelScript.cs" />
     <Compile Include="Assets\Scripts\Model\DateTimeInfo.cs" />
+    <Compile Include="Assets\Scripts\UI\StatSliders.cs" />
+    <Compile Include="Assets\Scripts\Model\TimeFlow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

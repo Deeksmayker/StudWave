@@ -6,6 +6,7 @@ namespace Assets.Scripts.Model
     {
         private static Dictionary<string, List<ChoiceBranch>> branches;
         private static DateTimeInfo dateTimeInfo = DateTimeInfo.Instance;
+        private static Player player = Player.Instance;
 
         public static Dictionary<string, List<ChoiceBranch>> FillBranches()
         {
@@ -19,23 +20,23 @@ namespace Assets.Scripts.Model
                         Answer = "Сыграть честно, то есть попробовать ответить",
                         SuccesAfterAnswer = "Вышел и филигранно порешал этот пример без шансов",
                         FailAfterAnswer = "Ну ты постоял у доски, потупил и ушел, бывает, хотя бы попытался",
-                        CheckSucces = () => Player.KnowledgeLevel >= 1,
+                        CheckSucces = () => player.KnowledgeLevel >= 1,
                         PlayerInteract = (checkSucces) =>
                         {
                             if (checkSucces)
                             {
-                                Player.KnowledgeXP += 2;
-                                Player.Study += 5;
-                                Player.Mood += 10;
-                                Player.Energy -= 10;
+                                player.KnowledgeXP += 2;
+                                player.Study += 5;
+                                player.Mood += 10;
+                                player.Energy -= 10;
                             }
 
                             else
-                            { 
-                                Player.KnowledgeXP += 7;
-                                Player.Study -= 5;
-                                Player.Mood -= 5;
-                                Player.Energy -= 15;
+                            {
+                                player.KnowledgeXP += 7;
+                                player.Study -= 5;
+                                player.Mood -= 5;
+                                player.Energy -= 15;
                             }
 
                             dateTimeInfo.Hour += 6; //Типа на парах он сидел шесть часов. Таже можно отельно минуты крутить, в общем можешь посмотреть в этом классе что там еще есть.

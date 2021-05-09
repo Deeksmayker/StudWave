@@ -4,39 +4,41 @@ using UnityEngine;
 
 public class StatsInteraction : MonoBehaviour
 {
+    private Player player;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = Player.Instance;
     }
 
-    public static void PlusTenHealth()
+    public void PlusTenHealth()
     {
-        Player.Health += 10;
+        player.Health += 10;
     }
 
-    public static void MinusTenHealth()
+    public void MinusTenHealth()
     {
-        Player.Health -= 10;
+        player.Health -= 10;
     }
 
-    public static void PlusTenHunger()
+    public void PlusTenHunger()
     {
-        Player.Hunger += 10;
+        player.Hunger += 10;
     }
 
-    public static void MinusTenHunger()
+    public void MinusTenHunger()
     {
-        Player.Hunger -= 10;
+        player.Hunger -= 10;
     }
 
-    public static void PlusTenEnergy()
+    public void PlusTenEnergy()
     {
-        Player.Energy += 10;
+        player.Energy += 10;
     }
 
-    public static void MinusTenEnergy()
+    public void MinusTenEnergy()
     {
-        Player.Energy -= 10;
+        player.Energy -= 10;
     }
 }
