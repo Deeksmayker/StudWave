@@ -1,20 +1,20 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: D:/!files/UnityProjects/StudWave/Packages/manifest.json
+    m_FilePath: C:/Users/Deeksmayker/source/repos/StudWaveCheck/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637513270890368821
-    m_Hash: 3354917639
+      ticks: 637564000849883127
+    m_Hash: 4007186375
   m_LockFileStatus:
-    m_FilePath: D:/!files/UnityProjects/StudWave/Packages/packages-lock.json
+    m_FilePath: C:/Users/Deeksmayker/source/repos/StudWaveCheck/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637513936806816569
-    m_Hash: 791935667
+      ticks: 637564001054862983
+    m_Hash: 38571225
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -120,7 +120,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -223,7 +223,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.ide.visualstudio@2.0.7
+      resolvedPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck\Library\PackageCache\com.unity.ide.visualstudio@2.0.7
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -304,7 +304,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -368,202 +368,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
-    - packageId: com.unity.mobile.android-logcat@1.2.1
-      testable: 0
-      isDirectDependency: 1
-      version: 1.2.1
-      source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.mobile.android-logcat@1.2.1
-      assetPath: Packages/com.unity.mobile.android-logcat
-      name: com.unity.mobile.android-logcat
-      displayName: Android Logcat
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: "Android Logcat package adds support for displaying log messages
-        coming from Android devices in Unity Editor. Click the 'View documentation'
-        link above for more information.\n\nThe window can be accessed in Unity Editor
-        via 'Window > Analysis > Android Logcat', or simply by pressing 'Alt+6' on
-        Windows or 'Option+6' on macOS. \n\nMake sure to have Android module loaded
-        and switch to Android build target in 'Build Settings' window if the menu
-        doesn't exist."
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.1.5-preview
-        - 0.2.7-preview
-        - 1.0.0
-        - 1.0.1-preview
-        - 1.0.3-preview
-        - 1.1.0
-        - 1.1.1
-        - 1.2.0-preview
-        - 1.2.0
-        - 1.2.1
-        compatible:
-        - 0.1.5-preview
-        - 0.2.7-preview
-        - 1.0.0
-        - 1.0.1-preview
-        - 1.0.3-preview
-        - 1.1.0
-        - 1.1.1
-        - 1.2.0-preview
-        - 1.2.0
-        - 1.2.1
-        verified: 1.2.1
-      dependencies: []
-      resolvedDependencies: []
-      keywords:
-      - Mobile
-      - Android
-      - Logcat
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637479648140000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: git+https://github.com/Unity-Technologies/com.unity.mobile.logcat.git
-        revision: 1bb3d0b67733fc73fbd6c88358cfd882d64cc428
-        path: 
-    - packageId: com.unity.mobile.notifications@1.3.2
-      testable: 0
-      isDirectDependency: 1
-      version: 1.3.2
-      source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.mobile.notifications@1.3.2
-      assetPath: Packages/com.unity.mobile.notifications
-      name: com.unity.mobile.notifications
-      displayName: Mobile Notifications
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: 'Mobile Notifications package adds support for scheduling local
-        repeatable or one-time notifications on iOS and Android.
-
-
-        Requires
-        iOS 10 and Android 4.4 or above.'
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 1.0.0-preview.4
-        - 1.0.0-preview.5
-        - 1.0.0-preview.7
-        - 1.0.0-preview.8
-        - 1.0.0-preview.9
-        - 1.0.0-preview.10
-        - 1.0.0-preview.13
-        - 1.0.0-preview.17
-        - 1.0.0-preview.21
-        - 1.0.0-preview.23
-        - 1.0.2
-        - 1.0.3-preview
-        - 1.0.3-preview.3
-        - 1.0.3-preview.4
-        - 1.0.3-preview.5
-        - 1.0.3-preview.6
-        - 1.0.3
-        - 1.0.4-preview.1
-        - 1.0.4-preview.2
-        - 1.0.4-preview.3
-        - 1.0.4-preview.4
-        - 1.0.4-preview.5
-        - 1.0.4-preview.6
-        - 1.0.4-preview.9
-        - 1.1.0-preview
-        - 1.2.0-preview
-        - 1.2.1-preview
-        - 1.3.0
-        - 1.3.2
-        compatible:
-        - 1.0.0-preview.4
-        - 1.0.0-preview.5
-        - 1.0.0-preview.7
-        - 1.0.0-preview.8
-        - 1.0.0-preview.9
-        - 1.0.0-preview.10
-        - 1.0.0-preview.13
-        - 1.0.0-preview.17
-        - 1.0.0-preview.21
-        - 1.0.0-preview.23
-        - 1.0.2
-        - 1.0.3-preview
-        - 1.0.3-preview.3
-        - 1.0.3-preview.4
-        - 1.0.3-preview.5
-        - 1.0.3-preview.6
-        - 1.0.3
-        - 1.0.4-preview.1
-        - 1.0.4-preview.2
-        - 1.0.4-preview.3
-        - 1.0.4-preview.4
-        - 1.0.4-preview.5
-        - 1.0.4-preview.6
-        - 1.0.4-preview.9
-        - 1.1.0-preview
-        - 1.2.0-preview
-        - 1.2.1-preview
-        - 1.3.0
-        - 1.3.2
-        verified: 1.3.2
-      dependencies:
-      - name: com.unity.modules.androidjni
-        version: 1.0.0
-      resolvedDependencies:
-      - name: com.unity.modules.androidjni
-        version: 1.0.0
-      keywords:
-      - Android
-      - iOS
-      - Notifications
-      - Mobile
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637411581370000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: git+https://github.com/Unity-Technologies/com.unity.mobile.notifications.git
-        revision: 2829196ea1779d64c68c36b0a95a19d3945889fd
-        path: 
     - packageId: com.unity.test-framework@1.1.22
       testable: 0
       isDirectDependency: 1
       version: 1.1.22
       source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.test-framework@1.1.22
+      resolvedPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck\Library\PackageCache\com.unity.test-framework@1.1.22
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -652,7 +462,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -803,7 +613,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.6
       source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.timeline@1.4.6
+      resolvedPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck\Library\PackageCache\com.unity.timeline@1.4.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -863,6 +673,7 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
+        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -878,6 +689,7 @@ m_PackageAssets:
         - 1.6.0-pre.3
         compatible:
         - 1.4.6
+        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -891,7 +703,7 @@ m_PackageAssets:
         - 1.5.4
         - 1.6.0-pre.1
         - 1.6.0-pre.3
-        verified: 1.4.6
+        verified: 1.4.7
       dependencies:
       - name: com.unity.modules.director
         version: 1.0.0
@@ -2746,7 +2558,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: D:\!files\UnityProjects\StudWave\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      resolvedPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2804,5 +2616,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: D:/!files/UnityProjects/StudWave/Packages
+m_ProjectPath: C:/Users/Deeksmayker/source/repos/StudWaveCheck/Packages
 m_EditorVersion: 2020.3.0f1 (c7b5465681fb)

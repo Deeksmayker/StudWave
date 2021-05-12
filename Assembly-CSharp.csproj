@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{609D71A9-A94B-EABC-6F75-2D743770CA1D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -56,24 +57,24 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GArbage\PinchAndZoom.cs" />
-    <Compile Include="Assets\Scripts\Character\PlayerWalking.cs" />
-    <Compile Include="Assets\Scripts\Model\ChoiceBranches.cs" />
     <Compile Include="Assets\Scripts\Model\BranchesFiller.cs" />
     <Compile Include="Assets\Scripts\UI\ShowClosePanel.cs" />
-    <Compile Include="Assets\Scripts\Model\Choice.cs" />
-    <Compile Include="Assets\Scripts\Main.cs" />
-    <Compile Include="Assets\Scripts\GArbage\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Triggers\PanelTrigger.cs" />
-    <Compile Include="Assets\Scripts\Character\Player.cs" />
     <Compile Include="Assets\Scripts\Camera\ScrollAndPinch.cs" />
-    <Compile Include="Assets\Scripts\Model\ChoiceBranch.cs" />
-    <Compile Include="Assets\Scripts\UI\StatsInteraction.cs" />
-    <Compile Include="Assets\Scripts\UI\InfoPanelScript.cs" />
-    <Compile Include="Assets\Scripts\Model\DateTimeInfo.cs" />
-    <Compile Include="Assets\Scripts\UI\StatSliders.cs" />
-    <Compile Include="Assets\Scripts\Model\TimeFlow.cs" />
+    <Compile Include="Assets\Scripts\Model\Choice.cs" />
     <Compile Include="Assets\Scripts\Model\PerkInfo.cs" />
+    <Compile Include="Assets\Scripts\UI\StatSliders.cs" />
+    <Compile Include="Assets\Scripts\Triggers\PanelTrigger.cs" />
+    <Compile Include="Assets\Scripts\GArbage\PinchAndZoom.cs" />
+    <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\Character\PlayerWalking.cs" />
+    <Compile Include="Assets\Scripts\Character\Player.cs" />
+    <Compile Include="Assets\Scripts\UI\InfoPanelScript.cs" />
+    <Compile Include="Assets\Scripts\GArbage\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Model\TimeFlow.cs" />
+    <Compile Include="Assets\Scripts\Model\DateTimeInfo.cs" />
+    <Compile Include="Assets\Scripts\Model\ChoiceBranch.cs" />
+    <Compile Include="Assets\Scripts\Model\ChoiceBranches.cs" />
+    <Compile Include="Assets\Scripts\UI\StatsInteraction.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -637,17 +638,11 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Notifications">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -664,14 +659,8 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Notifications.Android">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.Android.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Notifications.iOS">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
