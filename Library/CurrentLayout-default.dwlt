@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 23373
+  controlID: 87
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 23374
+  controlID: 20
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -324,24 +324,24 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
-      width: 1920
-      height: 907
-    m_Scale: {x: 0.82051283, y: 0.82051283}
-    m_Translation: {x: 960, y: 453.5}
+      y: 0
+      width: 1285
+      height: 545
+    m_Scale: {x: 0.5046296, y: 0.5046296}
+    m_Translation: {x: 642.5, y: 272.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1170
-      y: -552.7031
-      width: 2340
-      height: 1105.4062
+      x: -1273.211
+      y: -540
+      width: 2546.422
+      height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.82051283
-  m_LastWindowPixelSize: {x: 1920, y: 928}
+  m_defaultScale: 0.5046296
+  m_LastWindowPixelSize: {x: 1285, y: 545}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
@@ -376,9 +376,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a990100
-      m_LastClickedID: 104826
-      m_ExpandedIDs: 6294ffff7c98ffffc49cffff5ae0ffff52fbffff5a3b0000da3b0000083e0000743e00003c960100c0960100d49601007a9801007a990100
+      m_SelectedIDs: c4e8ffff
+      m_LastClickedID: -5948
+      m_ExpandedIDs: 6ee9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -439,9 +439,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -261.8247, y: 261.0127, z: 306.30038}
+    m_Target: {x: -248.79193, y: 334.6574, z: 268.81897}
     speed: 2
-    m_Value: {x: -261.8247, y: 261.0127, z: 306.30038}
+    m_Value: {x: -248.79193, y: 334.6574, z: 268.81897}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -566,14 +566,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: 81
-  m_LastProjectPath: D:\!files\UnityProjects\StudWave
+  m_LastProjectPath: C:\Users\Deeksmayker\source\repos\StudWaveCheck
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 58410000
-    m_LastClickedID: 16728
-    m_ExpandedIDs: 000000005841000000ca9a3b
+    m_SelectedIDs: 2c500000
+    m_LastClickedID: 20524
+    m_ExpandedIDs: 000000002c50000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -601,7 +601,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005841000000ca9a3b
+    m_ExpandedIDs: 000000002c500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
