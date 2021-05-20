@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     public static Player Instance = new Player();
 
+
     #region perks
 
     private int knowledgeXP;

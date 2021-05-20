@@ -12,6 +12,8 @@ namespace Assets.Scripts.Model
         public static DateTimeInfo Instance = new DateTimeInfo();
         private Player player = Player.Instance;
 
+        public bool IsWentToPairs;
+
         #region EnumAndProperties
 
         public enum Months
@@ -86,6 +88,11 @@ namespace Assets.Scripts.Model
                 {
                     value -= 24;
                     Week++;
+                    if (IsWentToPairs)
+                        player.Study += 5;
+                    else
+                        player.Study -= 10;
+                    IsWentToPairs = false;
                 }
 
                 hour = value;

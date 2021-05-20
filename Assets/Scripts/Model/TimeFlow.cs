@@ -29,7 +29,7 @@ namespace Assets.Scripts.Model
         {
             if (!rb.IsSleeping())
             {
-                dateTimeInfo.MinuteF += Time.deltaTime * 10;
+                dateTimeInfo.MinuteF += Time.deltaTime;
             }
         }
     }

@@ -59,11 +59,14 @@ namespace Assets.Scripts.Model
 
         void OnTriggerEnter()
         {
-             messageText.text = branch.Message;
-             firstText.text = branch.FirstChoice.Answer;
-             secondText.text = branch.SecondChoice.Answer;
-             thirdText.text = branch.ThirdChoice.Answer;
-             ShowClosePanel.LayoutInteract(ChoicePanel);
+            if (Key == "RTF")
+                DateTimeInfo.Instance.IsWentToPairs = true;
+           
+            messageText.text = branch.Message;
+            firstText.text = branch.FirstChoice.Answer;
+            secondText.text = branch.SecondChoice.Answer;
+            thirdText.text = branch.ThirdChoice.Answer;
+            ShowClosePanel.LayoutInteract(ChoicePanel);
         }
 
         public void AfterChoice(int buttonIndex)
