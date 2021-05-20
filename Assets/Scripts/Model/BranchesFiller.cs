@@ -274,6 +274,41 @@ namespace Assets.Scripts.Model
                     }
                 },
                 new ChoiceBranch()
+                {
+                    Message = "Ты проснулся с болью в горле.",
+                    FirstChoice = new Choice()
+                    {
+                        Answer = "Не обращать внимание на боль и пойти на пары",
+                        SuccesAfterAnswer = "Ты выздоровел и отучился на всех парах",
+                        FailAfterAnswer = "Твое самочувствие ухудшилось",
+                        CheckSucces = () => player.Health >= 75,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Health -= 15;
+                                player.Mood += 15;
+                                player.Energy -= 15;
+                                player.PhysicalXP += 2;
+                            }
+                            else
+                            {
+                                player.Health -= 25;
+                                player.Mood -= 10;
+                                player.Energy -= 20;
+                                player.PhysicalXP -= 2;
+                            }
+                        }
+
+                    },
+                    SecondChoice = new Choice()
+                    {
+                        Answer = "Сходить в аптеку за лекарством",
+                        SuccesAfterAnswer = "Ты купил лекарство и вылечился.",
+                        FailAfterAnswer = "У тебя не хватает денег на лекарство,",
+                        
+                    }
+                }  
             };
 
             branches = new Dictionary<string, List<ChoiceBranch>>();
