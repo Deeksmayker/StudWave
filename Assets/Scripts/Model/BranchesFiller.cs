@@ -434,10 +434,94 @@ namespace Assets.Scripts.Model
                         }
                     }
                 },
-
+                // гопота у обшаги
                 new ChoiceBranch()
                 {
-                    Message = ""
+                    Message = "У твоей общаги тебя останавливает группа странных людей и просят денег",
+                    FirstChoice = new Choice()
+                    {
+                        Answer = "Сказать, что ты студент и у тебя их нет",
+                        SuccesAfterAnswer = "Ты смог их убедить и тебе поверили на слово и отпустили",
+                        FailAfterAnswer = "Ты не смог их убедить, тебе не поверили и забрали их силой",
+                        CheckSucces = () => player.CharismaLevel >= 4,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood -= 5;
+                                player.CharismaXP += 3;
+                                player.PhysicalXP -= 1;
+                            }
+                            else
+                            {
+                                player.Mood -= 20;
+                                if (player.Money > 500) player.Money = 500;
+                                else player.Money = 500;
+                                player.CharismaXP += 1;
+                            }
+
+                            dateTimeInfo.Hour += 1;
+                        }
+                    },
+                    SecondChoice = new Choice()
+                    {
+                        Answer = "Вызвать главаря 1vs1(zxc)",
+                        SuccesAfterAnswer = "Ты доказал, что не пальцем деланый и он сказал им тебя не трогать.",
+                        FailAfterAnswer = "Тебя побили и забрали деньги",
+                        CheckSucces = () => player.PhysicalLevel >= 4,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood += 20;
+                                player.Energy -= 20;
+                                player.Health -= 10;
+                                player.Hunger -= 10;
+                                player.PhysicalXP += 5;
+                                dateTimeInfo.Hour += 2;
+                            }
+                            else
+                            {
+                                player.Mood -= 15;
+                                player.Energy -= 20;
+                                player.Health -= 30;
+                                player.Hunger -= 10;
+                                player.PhysicalXP += 5;
+                                if (player.Money > 500) player.Money = 500;
+                                else player.Money = 500;
+                                dateTimeInfo.Hour += 1;
+                            }
+                        }
+                    },
+                    ThirdChoice = new Choice()
+                    {
+                        Answer = "Попросить помощи у прохожих",
+                        SuccesAfterAnswer = "Подошло несколько парней с твоей общаги, которые тебя узнали и заступились.",
+                        FailAfterAnswer = "Никто не услышал просьб о помощи либо не хотели слышать. Тебя побили",
+                        CheckSucces = () => player.CharismaLevel >= 3 && player.StudWaveLevel >= 3,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood += 10;
+                                player.StudWaveXP += 3;
+                                player.Hunger -= 10;
+                                player.Energy -= 10;
+                                dateTimeInfo.Hour += 1;
+                            }
+                            else
+                            {
+                                player.Mood -= 15;
+                                player.Energy -= 20;
+                                player.Health -= 30;
+                                player.Hunger -= 10;
+                                player.PhysicalXP += 5;
+                                if (player.Money > 500) player.Money = 500;
+                                else player.Money = 500;
+                                dateTimeInfo.Hour += 1;
+                            }
+                        }
+                    }
                 }
 
             };
