@@ -10,6 +10,7 @@ namespace Assets.Scripts.Model
     public class DateTimeInfo
     {
         public static DateTimeInfo Instance = new DateTimeInfo();
+        private Player player = Player.Instance;
 
         #region EnumAndProperties
 
@@ -80,6 +81,7 @@ namespace Assets.Scripts.Model
             get => hour;
             set
             {
+                player.Hunger -= (value - Hour) * 2;
                 if (value >= 24)
                 {
                     value -= 24;
