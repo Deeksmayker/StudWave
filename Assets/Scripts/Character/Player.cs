@@ -133,5 +133,14 @@ public class Player : MonoBehaviour
         get => mood;
         set => mood = Mathf.Clamp(value, 0, 100);
     }
+
+    private int money = 10000;
+
+    public int Money
+    {
+        get => money;
+        set => money = value;
+    }
+
     #endregion
 }

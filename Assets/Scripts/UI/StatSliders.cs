@@ -17,6 +17,7 @@ namespace Assets.Scripts.UI
         [SerializeField] private Slider sliderHealth;
         [SerializeField] private Slider sliderMood;
         [SerializeField] private Slider sliderStudy;
+        [SerializeField] private Text moneyText;
 
         // Start is called before the first frame update
         void Start()
@@ -32,6 +33,7 @@ namespace Assets.Scripts.UI
             sliderHealth.value = player.Health;
             sliderMood.value = player.Mood;
             sliderStudy.value = player.Study;
+            moneyText.text = "₽ " + player.Money;
         }
     }
 }
