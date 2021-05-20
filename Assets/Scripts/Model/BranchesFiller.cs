@@ -305,10 +305,57 @@ namespace Assets.Scripts.Model
                     {
                         Answer = "Сходить в аптеку за лекарством",
                         SuccesAfterAnswer = "Ты купил лекарство и вылечился.",
-                        FailAfterAnswer = "У тебя не хватает денег на лекарство,",
-                        
+                        FailAfterAnswer = "У тебя не хватает денег на лекарство, clown?",
+                        CheckSucces = () => player.Money >= 1000,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Money -= 1000;
+                                player.Health += 10;
+                                player.Mood += 10;
+                                player.Energy -= 10;
+                                player.PhysicalXP += 1;
+                            }
+                            else
+                            {
+                                player.Health -= 25;
+                                player.Mood -= 10;
+                                player.Energy -= 10;
+                                player.PhysicalXP -= 2;
+                            }
+                            dateTimeInfo.Hour += 1;
+                        }
+                    },
+                    ThirdChoice = new Choice()
+                    {
+                        Answer = "Остаться дома и попробовать перебороть болезнь самому",
+                        SuccesAfterAnswer = "Твой организм справился с напастью и ты стал чувствовать себя лучше",
+                        FailAfterAnswer = "Твоего имуннитета не хватило для борьбы с болезнью, тебе стало хуже",
+                        CheckSucces = () => player.Health >= 50 && player.Mood >= 50,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Health += 10;
+                                player.Mood += 10;
+                                player.Energy -= 10;
+                                player.PhysicalXP += 1;
+                                player.Hunger -= 10;
+                            }
+                            else
+                            {
+                                player.Health -= 10;
+                                player.Mood -= 10;
+                                player.Energy -= 10;
+                                player.PhysicalXP += 1;
+                                player.Hunger -= 15;
+                            }
+                            dateTimeInfo.Hour += 1;
+                        }
                     }
-                }  
+                }
+
             };
 
             branches = new Dictionary<string, List<ChoiceBranch>>();
