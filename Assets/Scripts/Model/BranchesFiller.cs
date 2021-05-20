@@ -12,6 +12,7 @@ namespace Assets.Scripts.Model
         {
             var RTFlist = new List<ChoiceBranch>
             {
+                // вызвали к доске на паре
                 new ChoiceBranch
                 {
                     Message = "Прилетел ты наконец то на математику, думал отсидишься, но не тут то было. Тебя вызвали к доске, задание вроде не особо тяжелое, твои действия:",
@@ -88,7 +89,6 @@ namespace Assets.Scripts.Model
                                 player.Mood += 10;
                                 player.Energy -= 10;
                                 player.Hunger -= 25;
-
                             }
 
                             else
@@ -104,6 +104,7 @@ namespace Assets.Scripts.Model
                     }
                     
                 },
+                // стало плохо на паре
                 new ChoiceBranch()
                 {
                     Message = "Тебе стало плохо на паре, что будешь делать?",
@@ -185,11 +186,88 @@ namespace Assets.Scripts.Model
                             dateTimeInfo.Hour += 3;
                         }
                     }
-                }
+                },
+                // студенческий забыл
+                new ChoiceBranch()
+                {
+                    Message = "Забыл студенческий дома. Твои действия?",
+                    FirstChoice = new Choice()
+                    {
+                        Answer = "Попросить пропустить тебя в первый и последний раз",
+                        SuccesAfterAnswer = "Тебя пропустили,но чтобы больше такого не было.",
+                        FailAfterAnswer = "Ты не убедил вахтершу и тебя отправили домой.",
+                        CheckSucces = () => player.CharismaLevel >= 3,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.CharismaXP += 2;
+                                player.Mood += 10;
+                                player.StudWaveXP += 2;
+                                player.Hunger -= 5;
+                                dateTimeInfo.Hour += 5;
+                            }
+                            else
+                            {
+                                player.CharismaXP += 1;
+                                player.Mood -= 10;
+                                player.StudWaveXP += 1;
+                                player.Study -= 15;
+                                player.Hunger -= 10;
+                                dateTimeInfo.Hour += 3;
+                            }
+                        }
+                    },
+                    SecondChoice = new Choice()
+                    {
+                        Answer = "Пойти домой",
+                        SuccesAfterAnswer = "Ты пошел домой",
+                        CheckSucces = () => true,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood -= 15;
+                                player.Study -= 15;
+                                player.Energy -= 5;
+                                player.Hunger -= 5;
+                            }
+
+                            dateTimeInfo.Hour += 1;
+                        }
+                    },
+                    ThirdChoice = new Choice()
+                    {
+                        Answer = "Попробовать незаметоно пройти(затисаться в толпе)",
+                        SuccesAfterAnswer = "Тебе помогли друзья, прикрыв тебя.",
+                        FailAfterAnswer = "Тебя заметили и выгнали",
+                        CheckSucces = () => player.StudWaveLevel >= 3,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood += 10;
+                                player.StudWaveXP += 2;
+                                player.Hunger -= 10;
+                                player.Energy -= 10;
+                                dateTimeInfo.Hour += 3;
+                            }
+                            else
+                            {
+                                player.Mood -= 10;
+                                player.StudWaveXP += 1;
+                                player.Hunger -= 5;
+                                player.Energy -= 5;
+                                dateTimeInfo.Hour += 1;
+                            }
+                        }
+                    }
+                } 
             };
 
             var HOMElist = new List<ChoiceBranch>
             {
+                // комендша у общаги
                 new ChoiceBranch()
                 {
                     Message = "После выхода из общажития к тебе подошла комендша и говорит, что на вашем этаже кто-то разбросал мусор, и что это был ты.",
@@ -273,6 +351,7 @@ namespace Assets.Scripts.Model
                         }
                     }
                 },
+                // проснулся с болью в голове
                 new ChoiceBranch()
                 {
                     Message = "Ты проснулся с болью в горле.",
@@ -354,6 +433,11 @@ namespace Assets.Scripts.Model
                             dateTimeInfo.Hour += 1;
                         }
                     }
+                },
+
+                new ChoiceBranch()
+                {
+                    Message = ""
                 }
 
             };
