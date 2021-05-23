@@ -35,7 +35,10 @@ public class Player : MonoBehaviour
     public int PhysicalXP
     {
         get => physicalXP;
-        set => physicalXP = Mathf.Clamp(value, 0, 100);
+        set
+        {
+            physicalXP = Mathf.Clamp(value, 0, 100);
+        }
     }
 
     public int PhysicalLevel
@@ -48,7 +51,10 @@ public class Player : MonoBehaviour
     public int CharismaXP
     {
         get => charismaXP;
-        set => charismaXP = Mathf.Clamp(value, 0, 100);
+        set
+        {
+            charismaXP = Mathf.Clamp(value, 0, 100);
+        }
     }
 
     public int CharismaLevel
@@ -61,7 +67,12 @@ public class Player : MonoBehaviour
     public int StudWaveXP
     {
         get => studWaveXP;
-        set => studWaveXP = Mathf.Clamp(value, 0, 100);
+        set
+        {
+            if (value / 5 > StudWaveLevel)
+                InfoPanelScript.PerkIncreaseInfo("Студенческая волна", StudWaveLevel + (value / 5));
+            studWaveXP = Mathf.Clamp(value, 0, 100);
+        }
     }
 
     public int StudWaveLevel

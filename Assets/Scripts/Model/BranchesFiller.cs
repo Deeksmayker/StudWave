@@ -29,7 +29,7 @@ namespace Assets.Scripts.Model
                                 player.Study += 5;
                                 player.Mood += 10;
                                 player.Energy -= 10;
-                                player.Hunger -= 25;
+                                player.Hunger -= 10;
                             }
 
                             else
@@ -38,7 +38,7 @@ namespace Assets.Scripts.Model
                                 player.Study -= 5;
                                 player.Mood -= 5;
                                 player.Energy -= 15;
-                                player.Hunger -= 25;
+                                player.Hunger -= 10;
                             }
 
                             dateTimeInfo.Hour += 6; //Типа на парах он сидел шесть часов. Таже можно отельно минуты крутить, в общем можешь посмотреть в этом классе что там еще есть.
@@ -58,7 +58,7 @@ namespace Assets.Scripts.Model
                                 player.Mood += 15;
                                 player.Energy -= 10;
                                 player.CharismaXP += 2;
-                                player.Hunger -= 25;
+                                player.Hunger -= 10;
                             }
 
                             else
@@ -67,7 +67,7 @@ namespace Assets.Scripts.Model
                                 player.Mood -= 20;
                                 player.Energy -= 10;
                                 player.CharismaXP += 1;
-                                player.Hunger -= 25;
+                                player.Hunger -= 10;
                             }
 
                             dateTimeInfo.Hour += 6;
@@ -87,7 +87,7 @@ namespace Assets.Scripts.Model
                                 player.CharismaXP += 2;
                                 player.Mood += 10;
                                 player.Energy -= 10;
-                                player.Hunger -= 25;
+                                player.Hunger -= 10;
 
                             }
 
@@ -96,7 +96,7 @@ namespace Assets.Scripts.Model
                                 player.CharismaXP += 1;
                                 player.Mood -= 15;
                                 player.Energy -= 10;
-                                player.Hunger -= 25;
+                                player.Hunger -= 10;
                             }
                             dateTimeInfo.Hour += 6;
                         }
@@ -117,7 +117,7 @@ namespace Assets.Scripts.Model
                         {
                             if (checkSucces)
                             {
-                                player.StudWaveXP -= 1;
+                                player.StudWaveXP += 1;
                                 player.Health += 5;
                                 player.Mood += 5;
                                 player.Study -= 10;
@@ -126,7 +126,7 @@ namespace Assets.Scripts.Model
                             }
                             else
                             {
-                                player.StudWaveXP -= 1;
+                                player.StudWaveXP += 1;
                                 player.Health -= 15;
                                 player.Mood -= 10;
                                 player.Energy -= 10;
@@ -161,7 +161,7 @@ namespace Assets.Scripts.Model
                         Answer = "Попросить платок у соседа и остаться на паре",
                         SuccesAfterAnswer = "Тебе полегчало",
                         FailAfterAnswer = "Тебе стало хуже и учитель сказал тебе выйти",
-                        CheckSucces = () => player.StudWaveLevel >= 2,
+                        CheckSucces = () => player.StudWaveLevel >= 1,
                         PlayerInteract = (checkSucces) =>
                         {
                             if (checkSucces)
@@ -175,7 +175,7 @@ namespace Assets.Scripts.Model
                             }
                             else
                             {
-                                player.StudWaveXP -= 1;
+                                player.StudWaveXP += 10;
                                 player.Health -= 15;
                                 player.Mood -= 10;
                                 player.Energy -= 10;

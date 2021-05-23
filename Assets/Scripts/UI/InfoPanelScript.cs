@@ -20,6 +20,10 @@ public class InfoPanelScript : MonoBehaviour
         knowledgeXpSlider = KnowledgeButton.GetComponentInChildren<Slider>();
         knowledgeXpText = knowledgeXpSlider.GetComponentInChildren<Text>();
 
+        studWaveLevelText = StudWaveButton.GetComponentInChildren<Text>();
+        studWaveXpSlider = StudWaveButton.GetComponentInChildren<Slider>();
+        studWaveXpText = studWaveXpSlider.GetComponentInChildren<Text>();
+
         StaticPerkIncreaseInfoLayout = PerkIncreaseInfoLayout;
     }
 
@@ -31,6 +35,11 @@ public class InfoPanelScript : MonoBehaviour
     private Slider knowledgeXpSlider;
     private Text knowledgeXpText;
 
+    public Button StudWaveButton;
+    private Text studWaveLevelText;
+    private Slider studWaveXpSlider;
+    private Text studWaveXpText;
+
     [SerializeField] private Text majorDateText;
 
     public GameObject PerkIncreaseInfoLayout;
@@ -41,6 +50,10 @@ public class InfoPanelScript : MonoBehaviour
         knowledgeLevelText.text = player.KnowledgeLevel.ToString();
         knowledgeXpSlider.value = player.KnowledgeXP % 5;
         knowledgeXpText.text = player.KnowledgeXP % 5 + " / 5";
+
+        studWaveLevelText.text = player.StudWaveLevel.ToString();
+        studWaveXpSlider.value = player.StudWaveXP % 5;
+        studWaveXpText.text = player.StudWaveXP % 5 + " / 5";
 
         majorDateText.text = String.Format("{0} год. {1} курс", dateTimeInfo.Year, dateTimeInfo.Course);
     }

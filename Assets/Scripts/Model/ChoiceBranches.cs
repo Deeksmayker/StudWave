@@ -54,14 +54,15 @@ namespace Assets.Scripts.Model
             afterChoiceText = AfterChoicePanel.GetComponentInChildren<Text>();
             FirstChoiceButton = FirstChoiceButton.GetComponent<Button>();
 
-            branch = Branches[Key][random.Next(Count)];
         }
 
         void OnTriggerEnter()
         {
             if (Key == "RTF")
                 DateTimeInfo.Instance.IsWentToPairs = true;
-           
+
+            branch = Branches[Key][random.Next(Count)];
+
             messageText.text = branch.Message;
             firstText.text = branch.FirstChoice.Answer;
             secondText.text = branch.SecondChoice.Answer;

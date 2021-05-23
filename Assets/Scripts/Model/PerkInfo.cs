@@ -24,8 +24,10 @@ namespace Assets.Scripts.Model
         private void FillInfoDictionary()
         {
             var knowledge = "Энциклопедические знания - являются общими познаниями из многих областей, вроде математики, физики, истории и т.д. \n Прокачивается, например, при попытках ответить на паре.";
+            var studWave = "Студенческая волна - ";
             
             infoDictionary.Add("Энциклопедические знания", knowledge);
+            infoDictionary.Add("Студенческая волна", studWave);
         }
 
         public void GetPerkInfo(string perkName)
