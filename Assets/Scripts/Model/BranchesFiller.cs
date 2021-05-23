@@ -12,6 +12,7 @@ namespace Assets.Scripts.Model
         {
             var RTFlist = new List<ChoiceBranch>
             {
+                // вызвали к доске на паре
                 new ChoiceBranch
                 {
                     Message = "Прилетел ты наконец то на математику, думал отсидишься, но не тут то было. Тебя вызвали к доске, задание вроде не особо тяжелое, твои действия:",
@@ -104,6 +105,7 @@ namespace Assets.Scripts.Model
                     }
                     
                 },
+                // стало плохо на паре
                 new ChoiceBranch()
                 {
                     Message = "Тебе стало плохо на паре, что будешь делать?",
@@ -185,11 +187,88 @@ namespace Assets.Scripts.Model
                             dateTimeInfo.Hour += 3;
                         }
                     }
-                }
+                },
+                // студенческий забыл
+                new ChoiceBranch()
+                {
+                    Message = "Забыл студенческий дома. Твои действия?",
+                    FirstChoice = new Choice()
+                    {
+                        Answer = "Попросить пропустить тебя в первый и последний раз",
+                        SuccesAfterAnswer = "Тебя пропустили,но чтобы больше такого не было.",
+                        FailAfterAnswer = "Ты не убедил вахтершу и тебя отправили домой.",
+                        CheckSucces = () => player.CharismaLevel >= 3,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.CharismaXP += 2;
+                                player.Mood += 10;
+                                player.StudWaveXP += 2;
+                                player.Hunger -= 5;
+                                dateTimeInfo.Hour += 5;
+                            }
+                            else
+                            {
+                                player.CharismaXP += 1;
+                                player.Mood -= 10;
+                                player.StudWaveXP += 1;
+                                player.Study -= 15;
+                                player.Hunger -= 10;
+                                dateTimeInfo.Hour += 3;
+                            }
+                        }
+                    },
+                    SecondChoice = new Choice()
+                    {
+                        Answer = "Пойти домой",
+                        SuccesAfterAnswer = "Ты пошел домой",
+                        CheckSucces = () => true,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood -= 15;
+                                player.Study -= 15;
+                                player.Energy -= 5;
+                                player.Hunger -= 5;
+                            }
+
+                            dateTimeInfo.Hour += 1;
+                        }
+                    },
+                    ThirdChoice = new Choice()
+                    {
+                        Answer = "Попробовать незаметоно пройти(затисаться в толпе)",
+                        SuccesAfterAnswer = "Тебе помогли друзья, прикрыв тебя.",
+                        FailAfterAnswer = "Тебя заметили и выгнали",
+                        CheckSucces = () => player.StudWaveLevel >= 3,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood += 10;
+                                player.StudWaveXP += 2;
+                                player.Hunger -= 10;
+                                player.Energy -= 10;
+                                dateTimeInfo.Hour += 3;
+                            }
+                            else
+                            {
+                                player.Mood -= 10;
+                                player.StudWaveXP += 1;
+                                player.Hunger -= 5;
+                                player.Energy -= 5;
+                                dateTimeInfo.Hour += 1;
+                            }
+                        }
+                    }
+                } 
             };
 
             var HOMElist = new List<ChoiceBranch>
             {
+                // комендша у общаги
                 new ChoiceBranch()
                 {
                     Message = "После выхода из общажития к тебе подошла комендша и говорит, что на вашем этаже кто-то разбросал мусор, и что это был ты.",
@@ -273,6 +352,7 @@ namespace Assets.Scripts.Model
                         }
                     }
                 },
+                // проснулся с болью в голове
                 new ChoiceBranch()
                 {
                     Message = "Ты проснулся с болью в горле.",
@@ -305,10 +385,146 @@ namespace Assets.Scripts.Model
                     {
                         Answer = "Сходить в аптеку за лекарством",
                         SuccesAfterAnswer = "Ты купил лекарство и вылечился.",
-                        FailAfterAnswer = "У тебя не хватает денег на лекарство,",
-                        
+                        FailAfterAnswer = "У тебя не хватает денег на лекарство, clown?",
+                        CheckSucces = () => player.Money >= 1000,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Money -= 1000;
+                                player.Health += 10;
+                                player.Mood += 10;
+                                player.Energy -= 10;
+                                player.PhysicalXP += 1;
+                            }
+                            else
+                            {
+                                player.Health -= 25;
+                                player.Mood -= 10;
+                                player.Energy -= 10;
+                                player.PhysicalXP -= 2;
+                            }
+                            dateTimeInfo.Hour += 1;
+                        }
+                    },
+                    ThirdChoice = new Choice()
+                    {
+                        Answer = "Остаться дома и попробовать перебороть болезнь самому",
+                        SuccesAfterAnswer = "Твой организм справился с напастью и ты стал чувствовать себя лучше",
+                        FailAfterAnswer = "Твоего имуннитета не хватило для борьбы с болезнью, тебе стало хуже",
+                        CheckSucces = () => player.Health >= 50 && player.Mood >= 50,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Health += 10;
+                                player.Mood += 10;
+                                player.Energy -= 10;
+                                player.PhysicalXP += 1;
+                                player.Hunger -= 10;
+                            }
+                            else
+                            {
+                                player.Health -= 10;
+                                player.Mood -= 10;
+                                player.Energy -= 10;
+                                player.PhysicalXP += 1;
+                                player.Hunger -= 15;
+                            }
+                            dateTimeInfo.Hour += 1;
+                        }
                     }
-                }  
+                },
+                // гопота у обшаги
+                new ChoiceBranch()
+                {
+                    Message = "У твоей общаги тебя останавливает группа странных людей и просят денег",
+                    FirstChoice = new Choice()
+                    {
+                        Answer = "Сказать, что ты студент и у тебя их нет",
+                        SuccesAfterAnswer = "Ты смог их убедить и тебе поверили на слово и отпустили",
+                        FailAfterAnswer = "Ты не смог их убедить, тебе не поверили и забрали их силой",
+                        CheckSucces = () => player.CharismaLevel >= 4,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood -= 5;
+                                player.CharismaXP += 3;
+                                player.PhysicalXP -= 1;
+                            }
+                            else
+                            {
+                                player.Mood -= 20;
+                                if (player.Money > 500) player.Money = 500;
+                                else player.Money = 500;
+                                player.CharismaXP += 1;
+                            }
+
+                            dateTimeInfo.Hour += 1;
+                        }
+                    },
+                    SecondChoice = new Choice()
+                    {
+                        Answer = "Вызвать главаря 1vs1(zxc)",
+                        SuccesAfterAnswer = "Ты доказал, что не пальцем деланый и он сказал им тебя не трогать.",
+                        FailAfterAnswer = "Тебя побили и забрали деньги",
+                        CheckSucces = () => player.PhysicalLevel >= 4,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood += 20;
+                                player.Energy -= 20;
+                                player.Health -= 10;
+                                player.Hunger -= 10;
+                                player.PhysicalXP += 5;
+                                dateTimeInfo.Hour += 2;
+                            }
+                            else
+                            {
+                                player.Mood -= 15;
+                                player.Energy -= 20;
+                                player.Health -= 30;
+                                player.Hunger -= 10;
+                                player.PhysicalXP += 5;
+                                if (player.Money > 500) player.Money = 500;
+                                else player.Money = 500;
+                                dateTimeInfo.Hour += 1;
+                            }
+                        }
+                    },
+                    ThirdChoice = new Choice()
+                    {
+                        Answer = "Попросить помощи у прохожих",
+                        SuccesAfterAnswer = "Подошло несколько парней с твоей общаги, которые тебя узнали и заступились.",
+                        FailAfterAnswer = "Никто не услышал просьб о помощи либо не хотели слышать. Тебя побили",
+                        CheckSucces = () => player.CharismaLevel >= 3 && player.StudWaveLevel >= 3,
+                        PlayerInteract = (checkSucces) =>
+                        {
+                            if (checkSucces)
+                            {
+                                player.Mood += 10;
+                                player.StudWaveXP += 3;
+                                player.Hunger -= 10;
+                                player.Energy -= 10;
+                                dateTimeInfo.Hour += 1;
+                            }
+                            else
+                            {
+                                player.Mood -= 15;
+                                player.Energy -= 20;
+                                player.Health -= 30;
+                                player.Hunger -= 10;
+                                player.PhysicalXP += 5;
+                                if (player.Money > 500) player.Money = 500;
+                                else player.Money = 500;
+                                dateTimeInfo.Hour += 1;
+                            }
+                        }
+                    }
+                }
+
             };
 
             branches = new Dictionary<string, List<ChoiceBranch>>();
