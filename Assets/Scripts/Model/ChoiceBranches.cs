@@ -38,7 +38,7 @@ namespace Assets.Scripts.Model
 
         private Random random;
 
-        private ChoiceBranch branch;
+        private static ChoiceBranch branch;
 
         void Start()
         {

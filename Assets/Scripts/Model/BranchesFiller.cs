@@ -101,9 +101,7 @@ namespace Assets.Scripts.Model
                             }
                             dateTimeInfo.Hour += 6;
                         }
-
                     }
-                    
                 },
                 // стало плохо на паре
                 new ChoiceBranch()
