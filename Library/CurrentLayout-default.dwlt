@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 371}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 321}
   m_MaxSize: {x: 12002, y: 8021}
   vertical: 0
-  controlID: 88
+  controlID: 53
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 321}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 89
+  controlID: 54
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,8 +191,8 @@ MonoBehaviour:
     y: 0
     width: 1287
     height: 566
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 2340, y: 1080}
+  m_TargetSize: {x: 1285, y: 524}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -301,10 +301,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -1170
-    m_HBaseRangeMax: 1170
-    m_VBaseRangeMin: -540
-    m_VBaseRangeMax: 540
+    m_HBaseRangeMin: -642.5
+    m_HBaseRangeMax: 642.5
+    m_VBaseRangeMin: -262
+    m_VBaseRangeMax: 262
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -324,7 +324,7 @@ MonoBehaviour:
       y: 21
       width: 1285
       height: 524
-    m_Scale: {x: 0.48518518, y: 0.48518518}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 642.5, y: 262}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -332,12 +332,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1324.2367
-      y: -540
-      width: 2648.4734
-      height: 1080
+      x: -642.5
+      y: -262
+      width: 1285
+      height: 524
     m_MinimalGUI: 1
-  m_defaultScale: 0.48518518
+  m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1285, y: 545}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -373,9 +373,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 684a0000
-      m_LastClickedID: 19048
-      m_ExpandedIDs: 7cf8ffff0c470000384700001a480000
+      m_SelectedIDs: 80440000
+      m_LastClickedID: 17536
+      m_ExpandedIDs: 86faffff54fbffff804400001045000024450000f0470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -436,9 +436,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -256.4492, y: 261.6178, z: 298.42227}
+    m_Target: {x: -210.2901, y: 252.73544, z: 348.1712}
     speed: 2
-    m_Value: {x: -256.4492, y: 261.6178, z: 298.42227}
+    m_Value: {x: -210.2901, y: 252.73544, z: 348.1712}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -485,13 +485,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08385623, y: -0.9043972, z: 0.20989434, w: -0.3619569}
+    m_Target: {x: -0.08152548, y: -0.90717965, z: 0.20767307, w: -0.35677013}
     speed: 2
-    m_Value: {x: -0.08385478, y: -0.9043816, z: 0.20989072, w: -0.36195064}
+    m_Value: {x: -0.08152408, y: -0.9071641, z: 0.20766951, w: -0.35676402}
   m_Size:
-    m_Target: 10
+    m_Target: 74.4827
     speed: 2
-    m_Value: 10
+    m_Value: 74.4827
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -555,22 +555,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Model
+    - Assets/UIPictures
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 81
   m_LastFolders:
-  - Assets/Scripts/Model
+  - Assets/UIPictures
   m_LastFoldersGridSize: 81
   m_LastProjectPath: D:\!files\UnityProjects\StudWave
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3a420000
-    m_LastClickedID: 16954
-    m_ExpandedIDs: 00000000344b0000
+    scrollPos: {x: 0, y: 12}
+    m_SelectedIDs: 164b0000
+    m_LastClickedID: 19222
+    m_ExpandedIDs: 00000000d44a00000e4b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -598,7 +598,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000344b0000
+    m_ExpandedIDs: 00000000d44a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -623,10 +623,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f2070000
-    m_LastClickedInstanceID: 2034
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000383d0000747c0000a67d000000000000
+    m_SelectedInstanceIDs: 4ef6ffff
+    m_LastClickedInstanceID: -2482
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000383d0000747c0000a67d0000000000009e480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

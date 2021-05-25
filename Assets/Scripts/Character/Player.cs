@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
         get => physicalXP;
         set
         {
+            if (value / 5 > PhysicalLevel)
+                InfoPanelScript.PerkIncreaseInfo("Физическая подготовка", PhysicalLevel + (value / 5));
             physicalXP = Mathf.Clamp(value, 0, 100);
         }
     }
@@ -53,6 +55,8 @@ public class Player : MonoBehaviour
         get => charismaXP;
         set
         {
+            if (value / 5 > CharismaLevel)
+                InfoPanelScript.PerkIncreaseInfo("Харизма", CharismaLevel + (value / 5));
             charismaXP = Mathf.Clamp(value, 0, 100);
         }
     }
@@ -85,7 +89,12 @@ public class Player : MonoBehaviour
     public int TechXP
     {
         get => techXP / 5;
-        set => techXP = Mathf.Clamp(value, 0, 100);
+        set
+        {
+            if (value / 5 > TechLevel)
+                InfoPanelScript.PerkIncreaseInfo("Физическая подготовка", TechLevel + (value / 5));
+            techXP = Mathf.Clamp(value, 0, 100);
+        }
     }
 
     public int TechLevel

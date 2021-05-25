@@ -24,6 +24,14 @@ public class InfoPanelScript : MonoBehaviour
         studWaveXpSlider = StudWaveButton.GetComponentInChildren<Slider>();
         studWaveXpText = studWaveXpSlider.GetComponentInChildren<Text>();
 
+        physicalLevelText = PhysicalButton.GetComponentInChildren<Text>();
+        physicalXpSlider = PhysicalButton.GetComponentInChildren<Slider>();
+        physicalXpText = physicalXpSlider.GetComponentInChildren<Text>();
+
+        charismaLevelText = CharismaButton.GetComponentInChildren<Text>();
+        charismaXpSlider = CharismaButton.GetComponentInChildren<Slider>();
+        charismaXpText = charismaXpSlider.GetComponentInChildren<Text>();
+
         StaticPerkIncreaseInfoLayout = PerkIncreaseInfoLayout;
     }
 
@@ -40,6 +48,16 @@ public class InfoPanelScript : MonoBehaviour
     private Slider studWaveXpSlider;
     private Text studWaveXpText;
 
+    public Button PhysicalButton;
+    private Text physicalLevelText;
+    private Slider physicalXpSlider;
+    private Text physicalXpText;
+
+    public Button CharismaButton;
+    private Text charismaLevelText;
+    private Slider charismaXpSlider;
+    private Text charismaXpText;
+
     [SerializeField] private Text majorDateText;
 
     public GameObject PerkIncreaseInfoLayout;
@@ -54,6 +72,14 @@ public class InfoPanelScript : MonoBehaviour
         studWaveLevelText.text = player.StudWaveLevel.ToString();
         studWaveXpSlider.value = player.StudWaveXP % 5;
         studWaveXpText.text = player.StudWaveXP % 5 + " / 5";
+
+        physicalLevelText.text = player.PhysicalLevel.ToString();
+        physicalXpSlider.value = player.PhysicalXP % 5;
+        physicalXpText.text = player.PhysicalXP % 5 + " / 5";
+
+        charismaLevelText.text = player.CharismaLevel.ToString();
+        charismaXpSlider.value = player.CharismaXP % 5;
+        charismaXpText.text = player.CharismaXP % 5 + " / 5";
 
         majorDateText.text = String.Format("{0} год. {1} курс", dateTimeInfo.Year, dateTimeInfo.Course);
     }
