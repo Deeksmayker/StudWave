@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PlayerWalking : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class PlayerWalking : MonoBehaviour
 
     [SerializeField] private new Camera camera;
 
-    [SerializeField] GameObject interactPanel;
+    [SerializeField] GameObject confirmPanel;
+    private Text confirmPanelText;
 
     private Vector3 targetPoint = Vector3.zero;
 
@@ -19,6 +21,7 @@ public class PlayerWalking : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        confirmPanelText = confirmPanel.GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
@@ -36,7 +39,8 @@ public class PlayerWalking : MonoBehaviour
 
             if (Physics.Raycast(ray, out hitInfo, 1000, ClickableLayer))
             {
-                interactPanel.SetActive(true);
+                confirmPanelText.text = "Пойти " + hitInfo.transform.GetComponent<Text>().text + " ?";
+                confirmPanel.SetActive(true);
                 targetPoint = hitInfo.point;
             }
         }
@@ -46,6 +50,6 @@ public class PlayerWalking : MonoBehaviour
     {
         if (isButtonYes)
             agent.SetDestination(targetPoint);
-        interactPanel.SetActive(false);
+        confirmPanel.SetActive(false);
     }
 }

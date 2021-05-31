@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\GArbage\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Triggers\PanelTrigger.cs" />
     <Compile Include="Assets\Scripts\Character\Player.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuControls.cs" />
     <Compile Include="Assets\Scripts\Camera\ScrollAndPinch.cs" />
     <Compile Include="Assets\Scripts\Model\ChoiceBranch.cs" />
     <Compile Include="Assets\Scripts\UI\StatsInteraction.cs" />

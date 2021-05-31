@@ -175,7 +175,7 @@ namespace Assets.Scripts.Model
                             }
                             else
                             {
-                                player.StudWaveXP += 10;
+                                player.StudWaveXP += 1;
                                 player.Health -= 15;
                                 player.Mood -= 10;
                                 player.Energy -= 10;
@@ -183,6 +183,9 @@ namespace Assets.Scripts.Model
                                 player.Hunger -= 15;
                             }
                             dateTimeInfo.Hour += 3;
+
+                            //Для защиты
+                            player.StudWaveXP += 12;
                         }
                     }
                 },
