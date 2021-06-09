@@ -58,7 +58,11 @@ namespace Assets.Scripts.Model
 
         void OnTriggerEnter()
         {
-            if (Key == "RTF")
+            if (ChoicePanel.active)
+                return;
+            Debug.Log("Trigger enter (скорее всего всё еще происходит два захода в триггер)");
+
+            if (Key == "UNIVERSITY")
                 DateTimeInfo.Instance.IsWentToPairs = true;
 
             branch = Branches[Key][random.Next(Count)];

@@ -10,7 +10,7 @@ namespace Assets.Scripts.Model
 
         public static Dictionary<string, List<ChoiceBranch>> FillBranches()
         {
-            var RTFlist = new List<ChoiceBranch>
+            var UNIVERSITYlist = new List<ChoiceBranch>
             {
                 // вызвали к доске на паре
                 new ChoiceBranch
@@ -268,6 +268,8 @@ namespace Assets.Scripts.Model
 
             var HOMElist = new List<ChoiceBranch>
             {
+                #region stasis
+
                 //// комендша у общаги
                 //new ChoiceBranch()
                 //{
@@ -524,6 +526,10 @@ namespace Assets.Scripts.Model
                 //        }
                 //    }
                 //}
+
+
+                #endregion
+
                 new ChoiceBranch()
                 {
                     Message = "Сегодня дома спокойно, что будешь делать?",
@@ -538,7 +544,9 @@ namespace Assets.Scripts.Model
                             {
                                 player.Mood += 10;
                                 player.Health += 10;
+                                player.Energy += 70;
                             }
+
                             dateTimeInfo.Hour += 8;
                         }
                     },
@@ -555,6 +563,7 @@ namespace Assets.Scripts.Model
                                 player.Mood += 10;
                                 player.Health += 10;
                             }
+
                             dateTimeInfo.Hour += 8;
                         }
                     },
@@ -570,9 +579,13 @@ namespace Assets.Scripts.Model
                                 player.Mood += 5;
                                 player.KnowledgeXP += 3;
                             }
+
                             dateTimeInfo.Hour += 6;
+                        }
                     }
+                }
             };
+            
             var CAFElist = new List<ChoiceBranch>
             {
                 new ChoiceBranch()
@@ -592,6 +605,7 @@ namespace Assets.Scripts.Model
                                 player.Mood += 5;
                                 player.Energy += 10;
                                 player.Health += 5;
+                                player.Money -= 500;
                             }
                             else
                             {
@@ -645,10 +659,8 @@ namespace Assets.Scripts.Model
                 }
             };
 
-
-
             branches = new Dictionary<string, List<ChoiceBranch>>();
-            branches.Add("RTF", RTFlist);
+            branches.Add("UNIVERSITY", UNIVERSITYlist);
             branches.Add("HOME", HOMElist);
             branches.Add("CAFE", CAFElist);
             return branches;
